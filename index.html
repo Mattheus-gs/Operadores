@@ -1,0 +1,431 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Operadores JavaScript</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>Guia Completo dos Operadores JavaScript</h1>
+      <p>
+        Aprenda todos os operadores do JavaScript com exemplos práticos,
+        explicações detalhadas e visual moderno.
+      </p>
+
+      <button id="themeBtn">Alternar Tema</button>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- MENU -->
+    <aside class="menu">
+      <h2>Categorias</h2>
+
+      <ul>
+        <li><a href="#aritmeticos">Aritméticos</a></li>
+        <li><a href="#atribuicao">Atribuição</a></li>
+        <li><a href="#comparacao">Comparação</a></li>
+        <li><a href="#logicos">Lógicos</a></li>
+        <li><a href="#ternario">Ternário</a></li>
+        <li><a href="#incremento">Incremento</a></li>
+        <li><a href="#tipo">Tipo</a></li>
+        <li><a href="#bitwise">Bitwise</a></li>
+        <li><a href="#spread">Spread e Rest</a></li>
+        <li><a href="#optional">Optional Chaining</a></li>
+        <li><a href="#nullish">Nullish Coalescing</a></li>
+      </ul>
+    </aside>
+
+    <!-- CONTEÚDO -->
+    <section class="content">
+
+      <!-- ARITMÉTICOS -->
+      <div class="card" id="aritmeticos">
+        <h2>Operadores Aritméticos</h2>
+
+        <p>
+          São utilizados para realizar cálculos matemáticos.
+        </p>
+
+        <table>
+          <tr>
+            <th>Operador</th>
+            <th>Descrição</th>
+            <th>Exemplo</th>
+          </tr>
+
+          <tr>
+            <td>+</td>
+            <td>Soma</td>
+            <td>5 + 2 = 7</td>
+          </tr>
+
+          <tr>
+            <td>-</td>
+            <td>Subtração</td>
+            <td>10 - 3 = 7</td>
+          </tr>
+
+          <tr>
+            <td>*</td>
+            <td>Multiplicação</td>
+            <td>4 * 2 = 8</td>
+          </tr>
+
+          <tr>
+            <td>/</td>
+            <td>Divisão</td>
+            <td>10 / 2 = 5</td>
+          </tr>
+
+          <tr>
+            <td>%</td>
+            <td>Resto da divisão</td>
+            <td>10 % 3 = 1</td>
+          </tr>
+
+          <tr>
+            <td>**</td>
+            <td>Potência</td>
+            <td>2 ** 3 = 8</td>
+          </tr>
+        </table>
+
+<pre>
+let numero = 10;
+
+console.log(numero + 5);
+console.log(numero * 2);
+</pre>
+      </div>
+
+      <!-- ATRIBUIÇÃO -->
+      <div class="card" id="atribuicao">
+        <h2>Operadores de Atribuição</h2>
+
+        <p>
+          Utilizados para atribuir valores às variáveis.
+        </p>
+
+        <table>
+          <tr>
+            <th>Operador</th>
+            <th>Exemplo</th>
+            <th>Equivalente</th>
+          </tr>
+
+          <tr>
+            <td>=</td>
+            <td>x = 5</td>
+            <td>Atribui valor</td>
+          </tr>
+
+          <tr>
+            <td>+=</td>
+            <td>x += 2</td>
+            <td>x = x + 2</td>
+          </tr>
+
+          <tr>
+            <td>-=</td>
+            <td>x -= 2</td>
+            <td>x = x - 2</td>
+          </tr>
+
+          <tr>
+            <td>*=</td>
+            <td>x *= 2</td>
+            <td>x = x * 2</td>
+          </tr>
+
+          <tr>
+            <td>/=</td>
+            <td>x /= 2</td>
+            <td>x = x / 2</td>
+          </tr>
+        </table>
+
+<pre>
+let pontos = 10;
+
+pontos += 5;
+
+console.log(pontos);
+</pre>
+      </div>
+
+      <!-- COMPARAÇÃO -->
+      <div class="card" id="comparacao">
+        <h2>Operadores de Comparação</h2>
+
+        <p>
+          Comparam valores e retornam <strong>true</strong> ou <strong>false</strong>.
+        </p>
+
+        <table>
+          <tr>
+            <th>Operador</th>
+            <th>Descrição</th>
+          </tr>
+
+          <tr>
+            <td>==</td>
+            <td>Igual</td>
+          </tr>
+
+          <tr>
+            <td>===</td>
+            <td>Estritamente igual</td>
+          </tr>
+
+          <tr>
+            <td>!=</td>
+            <td>Diferente</td>
+          </tr>
+
+          <tr>
+            <td>!==</td>
+            <td>Estritamente diferente</td>
+          </tr>
+
+          <tr>
+            <td>&gt;</td>
+            <td>Maior que</td>
+          </tr>
+
+          <tr>
+            <td>&lt;</td>
+            <td>Menor que</td>
+          </tr>
+        </table>
+
+<pre>
+console.log(5 == "5");
+console.log(5 === "5");
+</pre>
+      </div>
+
+      <!-- LÓGICOS -->
+      <div class="card" id="logicos">
+        <h2>Operadores Lógicos</h2>
+
+        <p>
+          São utilizados para combinar expressões booleanas.
+        </p>
+
+        <table>
+          <tr>
+            <th>Operador</th>
+            <th>Descrição</th>
+          </tr>
+
+          <tr>
+            <td>&&</td>
+            <td>E lógico</td>
+          </tr>
+
+          <tr>
+            <td>||</td>
+            <td>OU lógico</td>
+          </tr>
+
+          <tr>
+            <td>!</td>
+            <td>Negação</td>
+          </tr>
+        </table>
+
+<pre>
+let idade = 20;
+let possuiCarteira = true;
+
+console.log(idade >= 18 && possuiCarteira);
+</pre>
+      </div>
+
+      <!-- TERNÁRIO -->
+      <div class="card" id="ternario">
+        <h2>Operador Ternário</h2>
+
+        <p>
+          Uma forma resumida de criar condições.
+        </p>
+
+<pre>
+condicao ? valorSeTrue : valorSeFalse
+</pre>
+
+<pre>
+let idade = 16;
+
+let resultado =
+  idade >= 18 ? "Maior de idade" : "Menor de idade";
+
+console.log(resultado);
+</pre>
+      </div>
+
+      <!-- INCREMENTO -->
+      <div class="card" id="incremento">
+        <h2>Incremento e Decremento</h2>
+
+        <table>
+          <tr>
+            <th>Operador</th>
+            <th>Descrição</th>
+          </tr>
+
+          <tr>
+            <td>++</td>
+            <td>Incrementa 1</td>
+          </tr>
+
+          <tr>
+            <td>--</td>
+            <td>Decrementa 1</td>
+          </tr>
+        </table>
+
+<pre>
+let numero = 5;
+
+numero++;
+
+console.log(numero);
+</pre>
+      </div>
+
+      <!-- TYPE -->
+      <div class="card" id="tipo">
+        <h2>Operadores de Tipo</h2>
+
+        <table>
+          <tr>
+            <th>Operador</th>
+            <th>Descrição</th>
+          </tr>
+
+          <tr>
+            <td>typeof</td>
+            <td>Retorna o tipo da variável</td>
+          </tr>
+
+          <tr>
+            <td>instanceof</td>
+            <td>Verifica instância</td>
+          </tr>
+        </table>
+
+<pre>
+console.log(typeof "Olá");
+console.log(typeof 10);
+</pre>
+      </div>
+
+      <!-- BITWISE -->
+      <div class="card" id="bitwise">
+        <h2>Operadores Bitwise</h2>
+
+        <p>
+          Trabalham diretamente com os bits dos números.
+        </p>
+
+        <table>
+          <tr>
+            <th>Operador</th>
+            <th>Descrição</th>
+          </tr>
+
+          <tr>
+            <td>&</td>
+            <td>AND</td>
+          </tr>
+
+          <tr>
+            <td>|</td>
+            <td>OR</td>
+          </tr>
+
+          <tr>
+            <td>^</td>
+            <td>XOR</td>
+          </tr>
+
+          <tr>
+            <td>~</td>
+            <td>NOT</td>
+          </tr>
+        </table>
+
+<pre>
+console.log(5 & 1);
+</pre>
+      </div>
+
+      <!-- SPREAD -->
+      <div class="card" id="spread">
+        <h2>Spread e Rest (...)</h2>
+
+        <p>
+          O operador <strong>...</strong> pode espalhar elementos
+          ou juntar vários valores.
+        </p>
+
+<pre>
+const numeros = [1, 2, 3];
+
+const copia = [...numeros];
+
+console.log(copia);
+</pre>
+      </div>
+
+      <!-- OPTIONAL -->
+      <div class="card" id="optional">
+        <h2>Optional Chaining (?.)</h2>
+
+        <p>
+          Evita erros ao acessar propriedades inexistentes.
+        </p>
+
+<pre>
+const usuario = {};
+
+console.log(usuario?.perfil?.nome);
+</pre>
+      </div>
+
+      <!-- NULLISH -->
+      <div class="card" id="nullish">
+        <h2>Nullish Coalescing (??)</h2>
+
+        <p>
+          Define valor padrão apenas para null ou undefined.
+        </p>
+
+<pre>
+let nome = null;
+
+console.log(nome ?? "Visitante");
+</pre>
+      </div>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      Desenvolvido com HTML, CSS e JavaScript.
+    </p>
+  </footer>
+
+  <script src="Operadores.js"></script>
+</body>
+</html>
